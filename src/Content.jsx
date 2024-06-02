@@ -1,7 +1,9 @@
+import { TodoIndex } from "./TodoIndex";
+
 export function Content() {
   return (
     <main>
-      <h1>Welcome to the Todo App</h1>
+      <TodoIndex />
     </main>
   );
 }
