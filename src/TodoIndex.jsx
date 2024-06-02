@@ -1,12 +1,12 @@
-export function TodoIndex() {
+export function TodoIndex(props) {
   return (
     <div>
       <h1>All Todos</h1>
-      <ol>
-        <li>Get Milk</li>
-        <li>Break Code</li>
-        <li>Cry</li>
-      </ol>
+      {props.todos.map((todo) => (
+        <div key={todo.id}>
+          <p>{todo.name}</p>
+        </div>
+      ))}
     </div>
   );
 }
