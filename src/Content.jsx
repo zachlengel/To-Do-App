@@ -1,6 +1,7 @@
 import { TodoIndex } from "./TodoIndex";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { TodoNew } from "./TodoNew";
 
 export function Content() {
   const todos = [
@@ -21,6 +22,7 @@ export function Content() {
 
   return (
     <main>
+      <TodoNew />
       <TodoIndex todos={todos} />
     </main>
   );
