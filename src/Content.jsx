@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { TodoNew } from "./TodoNew";
 
 export function Content() {
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
 
   const todos = [
     { id: 1, name: "Get milk" },
@@ -20,11 +20,11 @@ export function Content() {
   //   });
   // };
 
-  // const handleCreateTodo = (params) => {
-  //   axios.post("http://localhost:3000", params).then((response) => {
-  //     setTodos([...todos, response.data]);
-  //   });
-  // };
+  const handleCreateTodo = (params) => {
+    axios.post("http://localhost:3000", params).then((response) => {
+      setTodos([...todos, response.data]);
+    });
+  };
 
   // useEffect(handleIndexTodos, []);
 
